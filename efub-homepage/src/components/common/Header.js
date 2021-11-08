@@ -15,6 +15,7 @@ const HeaderBlock = styled.div`
     position: fixed;
     width: 100%;
     background: ${palette.black};
+    z-index: 99;
 `;
 
 /* Responsive 컴포넌트의 속성에 스타일을 추가해서 새로운 컴포넌트 생성 */
