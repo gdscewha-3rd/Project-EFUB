@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import logo from '../assets/about/efub_logo.gif';
 import mvp1 from '../assets/about/Mvp1.svg';
 import mvp2 from '../assets/about/Mvp2.svg';
 import mvp3 from '../assets/about/Mvp3.svg';
 import Review1 from '../components/about/Review1';
 import Review2 from '../components/about/Review2';
+import modal from '../components/common/ModalFrame';
 
+// 한글은 font-family: 'Roboto', sans-serif;
+// 영어는 font-family: 'Montserrat', sans-serif;
 const Wrapper = styled.div`
   display: flex;
   justify-content: center;
@@ -44,9 +47,10 @@ const ReviewWrapper=styled.div` // 퍼비후기
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    margin-top: 10rem;
+    margin-top: 5rem;
     align-items: left;
     width:100%;
+    height:auto;
 `
 const OrganizerWrapper=styled.div` // 이퍼비들 소개
     display: flex;
@@ -56,6 +60,24 @@ const OrganizerWrapper=styled.div` // 이퍼비들 소개
     margin-top: 10rem;
     align-items: left;
     width:100%;
+`
+const MemberWrapper=styled.div` // 임원진카드 모음
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    justify-content: flex-start;
+    margin-top: 10rem;
+    align-items: left;
+    width:60%;
+`
+const AllMemberWrapper=styled.div` // 전체임원진소개
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    justify-content: flex-start;
+    margin-top: 10rem;
+    align-items: left;
+    width:40%;
 `
 
 const Logo = styled.div`
@@ -70,18 +92,26 @@ const Logo = styled.div`
 const MainIntroText=styled.div`
     color:white;
     font-size:  ${props => props.size || 48}px;
+    font-family: 'Montserrat', sans-serif;
     line-height:120%;
 `
 const SubIntroText=styled.div`
     color:white;
     font-size:  ${props => props.size || 20}px;
+    font-family: 'Roboto', sans-serif;
     line-height:180%;
 `
 const SubTitle=styled.div`
     color:white;
     font-size:  ${props => props.size || 40}px;
-    margin-top: 10px;
-    margin-bottom: 80px;
+    font-family: 'Roboto', sans-serif;
+    ${props =>
+        props.eng &&
+        css`
+            font-family: 'Montserrat', sans-serif;
+    `}
+    font-weight: bold;
+    margin-top: 10rem;
 `
 
 const AboutPage = () => {
@@ -103,8 +133,9 @@ const AboutPage = () => {
             </IntroWrapper>
         </MainWrapper>
 
+        <SubTitle>1기 우수 활동 퍼비의 활동 후기</SubTitle>
+
         <ReviewWrapper> 
-            <SubTitle>1기 우수 활동 퍼비의 활동 후기</SubTitle>
             <Review1
             icon={mvp1}
             text={"안녕하세요! ☺ 저는 처음부터 우수개발자를 목표했던 것은 아니지만, 이펍에서 많이 배워야겠다는 마음으로 부족한 실력이지만 여기저기 열심히 참여하고 다녔더니 우수개발자라는 영광스러운 타이틀을 받을 수 있었던 것 같습니다! 우수 개발자라고 해서 실력순으로 선발되는 것은 아니니, 새로운 퍼비분들 마구 참여하면서 우수개발자 한 번 도전해보세요! 이번 기수의 우수개발자는 ✨아주 멋진 이펍 각인이 들어간 버티컬 마우스✨를 받았답니다…🥺 정말 잘 쓰고 있어요! 실력을 키울 수 있는 이펍에서 많이 배워가시고 활동하시길 바랄게요!(이로움, Front-end 인턴 개발자)"}
@@ -119,11 +150,15 @@ const AboutPage = () => {
             icon={mvp3}
             text={"웹개발에 대해 하나도 모르는 초보 개발자였는데,  EFUB에서 열리는 다양한 세미나와 프로젝트 덕분에 많이 성장하게 된 것 같습니다. 그리고 기초부터 심화까지 알려주는 커리큘럼과 리드/인턴에 맞는 토이 프로젝트 배치 덕분에 프로젝트에 대한 부담 없이 재미있게 개발할 수 있었습니다. 정말 EFUB은 올해 최고의 선택이었던 것 같습니다☺(강민지, 인턴 개발자)"}
             />
-
         </ReviewWrapper> 
 
-        <OrganizerWrapper>
         <SubTitle>EFUB ORGANIZER</SubTitle>
+
+        <OrganizerWrapper>
+            <MemberWrapper>
+
+            </MemberWrapper>
+        
 
 
         </OrganizerWrapper>

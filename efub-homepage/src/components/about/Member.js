@@ -29,7 +29,7 @@ const Text=styled.div`
     width:80%;
 `
 
-function Review1({icon, text}) {
+function Member({position, name}) {
     return (
         <Wrapper>
             <Logo img src={icon}/>
@@ -41,4 +41,4 @@ function Review1({icon, text}) {
     )
 }
 
-export default Review1;
+export default Member;
