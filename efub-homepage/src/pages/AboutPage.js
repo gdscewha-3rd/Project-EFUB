@@ -74,8 +74,7 @@ const MemberBlock = styled.div`
 
 const SubMemberBlock = styled.div`
     margin-bottom: 2rem;
-    padding-left: 1rem;
-    width: 60%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -87,7 +86,6 @@ const AllMemberWrapper=styled.div` // 전체임원진소개
     flex-direction: row;
     align-items: left;
     justify-content: flex-start;
-    margin-top: 10rem;
     align-items: left;
     width:40%;
 `
@@ -126,6 +124,22 @@ const SubTitle=styled.div`
     margin-top: 10rem;
 `
 
+const ModalButton=styled.button`
+    background: black;
+    color:white;
+    border: 0;
+    outline: 0;
+    font-size:  ${props => props.size || 24}px;
+    font-family: 'Roboto', sans-serif;
+    ${props =>
+        props.eng &&
+        css`
+            font-family: 'Montserrat', sans-serif;
+    `}
+    font-weight: bold;
+
+`
+
 const AboutPage = () => {
     return (
         <>
@@ -143,6 +157,9 @@ const AboutPage = () => {
                 <SubIntroText> 함께하는 웹 개발 커리어클럽 </SubIntroText>
                 </SubIntroWrapper>  
             </IntroWrapper>
+            <ModalButton> EFUB Career > </ModalButton>
+            <ModalButton> EFUB Curriculum > </ModalButton>
+            <ModalButton> 2기 지원하기 > </ModalButton>
         </MainWrapper>
 
         <SubTitle>1기 우수 활동 퍼비의 활동 후기</SubTitle>
@@ -199,6 +216,7 @@ const AboutPage = () => {
                     </SubMemberBlock>
                 </MemberBlock>
             <AllMemberWrapper>
+            <ModalButton> 전체 임원 보기 > </ModalButton>
 
             </AllMemberWrapper>
         </OrganizerWrapper>
