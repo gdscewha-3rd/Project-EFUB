@@ -6,6 +6,8 @@ import mvp2 from '../assets/about/Mvp2.svg';
 import mvp3 from '../assets/about/Mvp3.svg';
 import Review1 from '../components/about/Review1';
 import Review2 from '../components/about/Review2';
+import Member_Green from '../components/about/Member_Green';
+import Member_Blue from '../components/about/Member_Blue';
 import modal from '../components/common/ModalFrame';
 
 // 한글은 font-family: 'Roboto', sans-serif;
@@ -54,22 +56,32 @@ const ReviewWrapper=styled.div` // 퍼비후기
 `
 const OrganizerWrapper=styled.div` // 이퍼비들 소개
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: flex-start;
     margin-top: 10rem;
     align-items: left;
     width:100%;
 `
-const MemberWrapper=styled.div` // 임원진카드 모음
+const MemberBlock = styled.div`
+    margin-bottom: 2rem;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+`;
+
+const SubMemberBlock = styled.div`
+    margin-bottom: 2rem;
+    padding-left: 1rem;
+    width: 60%;
     display: flex;
     flex-direction: row;
-    align-items: left;
-    justify-content: flex-start;
-    margin-top: 10rem;
-    align-items: left;
-    width:60%;
-`
+    align-items: center;
+    justify-content: space-between;
+`;
+
 const AllMemberWrapper=styled.div` // 전체임원진소개
     display: flex;
     flex-direction: row;
@@ -155,12 +167,40 @@ const AboutPage = () => {
         <SubTitle>EFUB ORGANIZER</SubTitle>
 
         <OrganizerWrapper>
-            <MemberWrapper>
+                <MemberBlock>
+                    <SubMemberBlock>
+                        <Member_Green
+                            name={"정아연"}
+                            position={"회장"}
+                        />
+                        <Member_Green
+                            name={"김혜린"}
+                            position={"부회장"}
+                        />
+                        <Member_Green
+                            name={"윤효정"}
+                            position={"총무"}
+                        />
+                    </SubMemberBlock>
 
-            </MemberWrapper>
-        
+                    <SubMemberBlock>
+                        <Member_Blue
+                            name={"이윤지"}
+                            position={"프론트장"}
+                        />
+                        <Member_Blue
+                            name={"김정은"}
+                            position={"백엔드장"}
+                        />
+                        <Member_Blue
+                            name={"김채령"}
+                            position={"디자이너장"}
+                        />
+                    </SubMemberBlock>
+                </MemberBlock>
+            <AllMemberWrapper>
 
-
+            </AllMemberWrapper>
         </OrganizerWrapper>
 
         
