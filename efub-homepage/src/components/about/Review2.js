@@ -18,6 +18,7 @@ const Text=styled.div`
     color:white;
     font-size:  20px;
     text-align: left;
+    line-height:160%;
     width:80%;
 `
 

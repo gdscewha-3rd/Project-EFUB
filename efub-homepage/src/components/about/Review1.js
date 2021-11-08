@@ -6,7 +6,7 @@ const Wrapper=styled.div`
     flex-direction: row;
     align-items: center;
     width:100%;
-    height:200px;
+    height:auto;
 `
 const Logo = styled.img`
     width: 20%auto;
@@ -18,6 +18,7 @@ const Text=styled.div`
     color:white;
     font-size: 20px;
     text-align: left;
+    line-height:160%;
     width:80%;
 `
 

@@ -19,6 +19,7 @@ const MainWrapper=styled.div` // 이펍소개+버튼들
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    margin-top: 20rem;
     width:100%;
     height:300px;
 `
@@ -26,17 +27,33 @@ const IntroWrapper=styled.div` // 이펍소개
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin-top: 30rem;
     align-items: left;
     width:40%;
     height:100%;
+`
+const SubIntroWrapper=styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 2.5rem;
+    align-items: left;
+    width:100%;
 `
 const ReviewWrapper=styled.div` // 퍼비후기
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    margin-top: 20rem;
+    margin-top: 10rem;
+    align-items: left;
+    width:100%;
+`
+const OrganizerWrapper=styled.div` // 이퍼비들 소개
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 10rem;
     align-items: left;
     width:100%;
 `
@@ -53,12 +70,18 @@ const Logo = styled.div`
 const MainIntroText=styled.div`
     color:white;
     font-size:  ${props => props.size || 48}px;
-    margin-top: 2px;
+    line-height:120%;
 `
 const SubIntroText=styled.div`
     color:white;
     font-size:  ${props => props.size || 20}px;
-    margin-top: 2px;
+    line-height:180%;
+`
+const SubTitle=styled.div`
+    color:white;
+    font-size:  ${props => props.size || 40}px;
+    margin-top: 10px;
+    margin-bottom: 80px;
 `
 
 const AboutPage = () => {
@@ -73,14 +96,15 @@ const AboutPage = () => {
                 <MainIntroText> FUTURE </MainIntroText>
                 <MainIntroText> UPGRADE </MainIntroText>
                 <MainIntroText> BY EFUB </MainIntroText>
+                <SubIntroWrapper> 
                 <SubIntroText> 리드부터 인턴, 프론트에서 백, 디자인까지 </SubIntroText>
-                <SubIntroText> 함께하는 웹 개발 커리어클럽 </SubIntroText> 
+                <SubIntroText> 함께하는 웹 개발 커리어클럽 </SubIntroText>
+                </SubIntroWrapper>  
             </IntroWrapper>
         </MainWrapper>
 
         <ReviewWrapper> 
-            <h1>1기 우수 활동 퍼비의 활동 후기</h1>
-
+            <SubTitle>1기 우수 활동 퍼비의 활동 후기</SubTitle>
             <Review1
             icon={mvp1}
             text={"안녕하세요! ☺ 저는 처음부터 우수개발자를 목표했던 것은 아니지만, 이펍에서 많이 배워야겠다는 마음으로 부족한 실력이지만 여기저기 열심히 참여하고 다녔더니 우수개발자라는 영광스러운 타이틀을 받을 수 있었던 것 같습니다! 우수 개발자라고 해서 실력순으로 선발되는 것은 아니니, 새로운 퍼비분들 마구 참여하면서 우수개발자 한 번 도전해보세요! 이번 기수의 우수개발자는 ✨아주 멋진 이펍 각인이 들어간 버티컬 마우스✨를 받았답니다…🥺 정말 잘 쓰고 있어요! 실력을 키울 수 있는 이펍에서 많이 배워가시고 활동하시길 바랄게요!(이로움, Front-end 인턴 개발자)"}
@@ -97,6 +121,12 @@ const AboutPage = () => {
             />
 
         </ReviewWrapper> 
+
+        <OrganizerWrapper>
+        <SubTitle>EFUB ORGANIZER</SubTitle>
+
+
+        </OrganizerWrapper>
 
         
 
