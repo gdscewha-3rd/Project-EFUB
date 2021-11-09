@@ -6,30 +6,47 @@ const Wrapper=styled.div`
     flex-direction: row;
     align-items: center;
     width:100%;
-    height:200px;
+    height:auto;
 `
-const Profile = styled.img`
-    width: 20%auto;
+const Logo = styled.img`
+    width: 20%;
+    height: 20%;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-left: 0.5rem;
+    margin-right: 1.5rem;
 `;
-const Text=styled.div`
+const TextBox=styled.div`
+    background-color: #1C1C1C;
+    border-radius: 10px;
     color:white;
-    font-size:  20px;
+    font-size: 20px;
     text-align: left;
     line-height:160%;
     width:80%;
+    height: 100%;
+`
+const Text=styled.div`
+    color:white;
+    font-size: 20px;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    line-height:160%;
+    width:90%;
 `
 
-function Review2({icon, text}) {
+function Review1({profile, text}) {
     return (
         <Wrapper>
-            <Text>{text}</Text>
-            <Profile src={icon}/>
+            <TextBox> 
+                <Text>{text}</Text>
+            </TextBox> 
+            <Logo src={profile}/>
         </Wrapper>
 
     )
 }
 
-export default Review2;
+export default Review1;
