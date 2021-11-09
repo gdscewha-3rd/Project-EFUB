@@ -24,7 +24,6 @@ const MainWrapper=styled.div` // 이펍소개+버튼들
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: center;
     margin-top: 20rem;
     width:100%;
     height:300px;
@@ -35,6 +34,12 @@ const IntroWrapper=styled.div` // 이펍소개
     justify-content: flex-start;
     align-items: left;
     width:40%;
+    height:100%;
+`
+const RotateButton=styled.div` // 회전버튼
+    display: flex;
+    position: relative;
+    width:60%;
     height:100%;
 `
 const SubIntroWrapper=styled.div`
@@ -84,10 +89,7 @@ const SubMemberBlock = styled.div`
 
 const AllMemberWrapper=styled.div` // 전체임원진소개
     display: flex;
-    flex-direction: row;
-    align-items: left;
-    justify-content: flex-start;
-    align-items: left;
+    position:relative;
     width:40%;
 `
 
@@ -125,6 +127,54 @@ const SubTitle=styled.div`
     margin-top: 10rem;
 `
 
+const ModalButton_Career=styled.button`
+    background: black;
+    color:white;
+    border: 0;
+    outline: 0;
+    position: absolute;
+    top: 100px; left: 80px;
+    font-size:  ${props => props.size || 24}px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    transform: rotate( -10deg );
+`
+const ModalButton_Curriculum=styled.button`
+    background: black;
+    color:white;
+    border: 0;
+    outline: 0;
+    position: absolute;
+    top: 200px; left: 150px;
+    font-size:  ${props => props.size || 24}px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    transform: rotate( 15deg );
+`
+const ModalButton_apply=styled.button`
+    background: black;
+    color:white;
+    border: 0;
+    outline: 0;
+    position: absolute;
+    top: 100px; left: 350px;
+    font-size:  ${props => props.size || 24}px;
+    transform: rotate( -15deg );
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+`
+const ModalButton_allmember=styled.button`
+    background: black;
+    color:white;
+    border: 0;
+    outline: 0;
+    position: absolute;
+    top:80px; left: 20px;
+    font-size:  ${props => props.size || 24}px;
+    transform: rotate( -15deg );
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+`
 const ModalButton=styled.button`
     background: black;
     color:white;
@@ -158,9 +208,11 @@ const AboutPage = () => {
                 <SubIntroText> 함께하는 웹 개발 커리어클럽 </SubIntroText>
                 </SubIntroWrapper>  
             </IntroWrapper>
-            <ModalButton> EFUB Career > </ModalButton>
-            <ModalButton> EFUB Curriculum > </ModalButton>
-            <ModalButton> 2기 지원하기 > </ModalButton>
+            <RotateButton>
+            <ModalButton_Career> EFUB Career > </ModalButton_Career>
+            <ModalButton_Curriculum> EFUB Curriculum > </ModalButton_Curriculum>
+            <ModalButton_apply> 2기 지원하기 > </ModalButton_apply>
+            </RotateButton>
         </MainWrapper>
 
         <SubTitle>1기 우수 활동 퍼비의 활동 후기</SubTitle>
@@ -217,13 +269,10 @@ const AboutPage = () => {
                     </SubMemberBlock>
                 </MemberBlock>
             <AllMemberWrapper>
-            <ModalButton> 전체 임원 보기 > </ModalButton>
+            <ModalButton_allmember> 전체 임원 보기 > </ModalButton_allmember>
 
             </AllMemberWrapper>
         </OrganizerWrapper>
-
-        
-
         </Wrapper>
         </>
     );
