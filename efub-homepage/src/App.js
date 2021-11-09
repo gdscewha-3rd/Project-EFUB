@@ -9,6 +9,9 @@ import ContactPage from "./pages/ContactPage";
 import Footer from "./components/common/Footer";
 import Responsive from "./components/common/Responsive";
 import DeveloperRecruit from "./pages/DeveloperRecruit";
+import DeveloperRecruitSub from "./pages/DeveloperRecruitSub";
+import DeveloperRecruitLead from "./pages/DeveloperRecruitLead";
+import DeveloperRecruitIntern from "./pages/DeveloperRecruitIntern";
 import DesignerRecruit from "./pages/DesignerRecruit";
 import ListPage from "./pages/ListPage";
 import FirstList from "./pages/FirstList";
@@ -39,6 +42,9 @@ const App = () => {
           <Route component={FirstList} path="/firstList" />
           <Route component={FinalList} path="/finalList" />
           <Route component={DeveloperRecruit} path="/developerRecruit" />
+          <Route component={DeveloperRecruitSub} path="/developerRecruitSub" />
+          <Route component={DeveloperRecruitLead} path="/developerRecruitLead" />
+          <Route component={DeveloperRecruitIntern} path="/developerRecruitIntern" />
           <Route component={DesignerRecruit} path="/designerRecruit" />
           <Route component={DesignerRecruitSub} path="/designerRecruitSub" />
           <Route component={ContactPage} path="/contact" />

@@ -28,12 +28,6 @@ const Foot = styled.div`
     margin-top: 1.5rem;
     justify-content: space-between;
 `
-const TextBox = styled.div`
-  width: 100%;
-  height: 5rem;
-  background-color: rgba(225, 225, 225, 0.15);
-`;
-
 const Text1 = styled.div`
     font-family: Roboto;
     font-style: normal;
@@ -42,7 +36,6 @@ const Text1 = styled.div`
     margin-bottom: 1rem;
     line-height: 1.725rem; //28px
 `
-
 const Text2 = styled.div`
     font-family: Roboto;
     font-style: normal;
@@ -69,7 +62,7 @@ const DesignerRecruit = () => {
     <>
     <Banner>
       <h1 style = {{height: '3.5rem', marginBottom: '0.01rem'}} >UI/UX DESIGNER</h1>
-      <h6 style = {{marginTop: '0.001rem'}}>지원서 작성</h6>
+      <h4 style = {{marginTop: '0.001rem'}}>지원서 작성</h4>
     </Banner>
     <Main>
       <Text1>이름</Text1>
@@ -85,14 +78,12 @@ const DesignerRecruit = () => {
       <Text2 style = {{marginTop: "1.725rem"}}>인적사항은 추후 면접 일시와 합격 안내 시 이용됩니다.</Text2>
       <Text2>여러분의 소중한 개인정보는 이펍 모집 일정이 끝난 직후 바로 폐기됩니다.</Text2>
       <Foot>
-        <Text2>1/3 페이지</Text2>
+        <Text2>1/2 페이지</Text2>
         <Link to = "/designerRecruitSub">
           <Button filled>다음</Button>
         </Link>
       </Foot>
     </Main>
-
-  
   </>
   </div>
 };

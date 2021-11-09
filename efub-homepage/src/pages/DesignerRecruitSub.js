@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import palette from "../lib/styles/palette"
 import Button from "../components/common/Button";
+import { RadioButton } from "../components/common/RadioButton";
+import {CheckBox} from "../components/common/CheckBox";
 
 const Banner = styled.div`
     height: 15rem;
@@ -68,7 +70,17 @@ const Input = styled.input`
     margin-bottom: 2rem;
     width: 100%; 
 `
+const Row = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 2rem;
+`
 const DesignerRecruitSub= () => {
+    const [select, setSelect] = useState("all");
+    
     return <div>
       <Banner>
         <h1 style = {{height: '3.5rem', marginBottom: '0.01rem'}} >UI/UX DESIGNER</h1>
@@ -78,8 +90,31 @@ const DesignerRecruitSub= () => {
        <Text1>1. EFUB에 지원하게된 동기를 적어주세요 (300자 내외)</Text1>
        <TextBox/>
        <Text1>2. 웹디자인에 대한 자신감을 5점 만점으로 평가해주세요.</Text1>
+            <Row style = {{width: "42%", marginLeft: "54%"}}>
+                <Text1>1</Text1>
+                <Text1>2</Text1>
+                <Text1>3</Text1>
+                <Text1>4</Text1>
+                <Text1>5</Text1>
+            </Row>
+            <Row style = {{marginBottom: "3rem"}}>
+                <Text1 style = {{marginTop: "1rem"}}>내 자신감은..</Text1>
+                <RadioButton/>
+            </Row>
        <Text1>3. 사용할 수 있는 디자인 툴을 모두 선택해주세요.</Text1>
+        
        <Text1>3-1. 선택하신 툴에 대한 능숙도를 5점 만점으로 평가해주세요.</Text1>
+           <Row style = {{width: "42%", marginLeft: "54%"}}>
+                <Text1>1</Text1>
+                <Text1>2</Text1>
+                <Text1>3</Text1>
+                <Text1>4</Text1>
+                <Text1>5</Text1>
+            </Row>
+            <Row style = {{marginBottom: "3rem"}}>
+                <Text1 style = {{marginTop: "1rem"}}>내 자신감은..</Text1>
+                <RadioButton/>
+            </Row>
        <Text1>4. 동아리에 들어온다면 하고 싶은 프로젝트에 대해서 간략히 설명해주세요.(100자 내외)</Text1>
        <TextBox/>
        <Text1>5. 개발자와의 협업 경험이 있다면, 프로젝트 경험에 대해 서술해주세요.</Text1>
@@ -92,16 +127,13 @@ const DesignerRecruitSub= () => {
        <Text1>9. 오티는 9월 11일 토요일 09시 30분에 진행됩니다.
               오티를 참석하지 않으실 경우, 합격은 취소됩니다. 확인하셨습니까?</Text1>
        <Foot>
-        <Text2>1/3 페이지</Text2>  
+        <Text2>2/2 페이지</Text2>  
           <FootSub>
             <Button blue>저장</Button>
             <Button filled>제출하기</Button>
           </FootSub>
-       
        </Foot>
      </Main>
-     
-    
     </div>
   };
   

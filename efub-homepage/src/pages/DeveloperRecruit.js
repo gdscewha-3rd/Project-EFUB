@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import palette from "../lib/styles/palette"
+import { Link } from "react-router-dom";
 import Button from "../components/common/Button";
 
 const Banner = styled.div`
@@ -77,7 +78,9 @@ const DeveloperRecruit = () => {
       <Text2>여러분의 소중한 개인정보는 이펍 모집 일정이 끝난 직후 바로 폐기됩니다.</Text2>
       <Foot>
         <Text2>1/3 페이지</Text2>
-        <Button filled>다음</Button>
+        <Link to = "/developerRecruitSub">
+          <Button filled>다음</Button>
+        </Link>
       </Foot>
     </Main>
 
