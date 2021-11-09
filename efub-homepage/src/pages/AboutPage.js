@@ -9,6 +9,19 @@ import Review1 from '../components/about/Review1';
 import Review2 from '../components/about/Review2';
 import Member_Green from '../components/about/Member_Green';
 import Member_Blue from '../components/about/Member_Blue';
+
+import main_blue from '../assets/about/main_blue.png';
+import main_circle from '../assets/about/main_circle.png';
+import main_green from '../assets/about/main_green.png';
+import main_long_tri from '../assets/about/main_long_tri.png';
+import main_pink from '../assets/about/main_pink.png';
+import main_tri from '../assets/about/main_tri.png';
+
+import organ_green from '../assets/about/organ_green.png';
+import organ_pub from '../assets/about/organ_pub.png';
+import organ_sun from '../assets/about/organ_sun.png';
+
+
 import modal from '../components/common/ModalFrame';
 
 // 한글은 font-family: 'Roboto', sans-serif;
