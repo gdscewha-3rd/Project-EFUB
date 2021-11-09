@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import palette from "../lib/styles/palette"
 import Button from "../components/common/Button";
+import { RadioButton } from "../components/common/RadioButton";
+import Checkbox from "../components/common/CheckBox";
+import { Link } from "react-router-dom";
 
 const Banner = styled.div`
     height: 15rem;
@@ -17,7 +20,7 @@ const Main = styled.div`
     align-items: flex-start;
     //justify-content: center;
     width: 35rem;
-    height: 50rem;
+    height: 60rem;
 `
 const Foot = styled.div`
     width: 35rem;
@@ -68,6 +71,15 @@ const Input = styled.input`
     margin-bottom: 2.5rem;
     width: 100%; 
 `
+const Row = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 2rem;
+`
+
 const DeveloperRecruitSub = () => {
     return <div> 
         <Banner>
@@ -79,17 +91,31 @@ const DeveloperRecruitSub = () => {
             <TextBox/>
             <Text1>2. 동아리에 들어온다면 하고 싶은 프로젝트에 대해서 간략히 설명해주세요.(100자 내외)</Text1>
             <TextBox/>
-            <Text1>3. 지원 분야를 선택해주세요.</Text1>
+            <Text1 style= {{ marginBottom: '0rem'}}>3. 지원 분야를 선택해주세요.</Text1>
             <Text2 style = {{marginBottom: '2rem'}}>3번 문항의 답변에 따라 인턴 지원서 혹은 리드 지원서 페이지로 넘어가게 되니신중히 체크해 주세요!</Text2>
             <Text1>4. 자신 있는 프로그래밍 언어를 적어주세요.</Text1>
             <Input/>
             <Text1>4-1. 위에서 답한 언어에 대한 자신감을 5점 만점으로 평가해주세요.</Text1>
+            <Row style = {{width: "42%", marginLeft: "54%"}}>
+                <Text1>1</Text1>
+                <Text1>2</Text1>
+                <Text1>3</Text1>
+                <Text1>4</Text1>
+                <Text1>5</Text1>
+            </Row>
+            <Row style = {{marginBottom: "3rem"}}>
+                <Text1 style = {{marginTop: "1rem"}}>내 자신감은..</Text1>
+                <RadioButton/>
+            </Row>
             <Text1>5. 사용할 수 있는 디자인 툴을 모두 선택해주세요.</Text1>
+            <Checkbox/>
             <Foot>
             <Text2>2/3 페이지</Text2>  
                 <FootSub>
                     <Button blue>저장</Button>
-                    <Button filled>다음</Button>
+                    <Link to = "/developerRecruitIntern">
+                        <Button filled>다음</Button>
+                       </Link>
                 </FootSub>
             </Foot>
         </Main>
