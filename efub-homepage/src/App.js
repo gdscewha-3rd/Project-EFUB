@@ -10,6 +10,7 @@ import Footer from "./components/common/Footer";
 import Responsive from "./components/common/Responsive";
 import DeveloperRecruit from "./pages/DeveloperRecruit";
 import DesignerRecruit from "./pages/DesignerRecruit";
+import DesignerRecruitSub from "./pages/DesignerRecruitSub";
 
 const Main = styled(Responsive)`
   min-height: calc(100vh - 14rem);
@@ -33,7 +34,9 @@ const App = () => {
           <Route component={RecruitmentPage} path="/recruitment" />
           <Route component={DeveloperRecruit} path="/developerRecruit" />
           <Route component={DesignerRecruit} path="/designerRecruit" />
+          <Route component={DesignerRecruitSub} path="/designerRecruitSub" />
           <Route component={ContactPage} path="/contact" />
+          
         </Switch>
       </Main>
       <Footer />
