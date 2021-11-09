@@ -68,6 +68,7 @@ const Input = styled.input`
     margin-bottom: 2rem;
     width: 100%; 
 `
+
 const DesignerRecruitSub= () => {
     return <div>
       <Banner>
@@ -92,16 +93,13 @@ const DesignerRecruitSub= () => {
        <Text1>9. 오티는 9월 11일 토요일 09시 30분에 진행됩니다.
               오티를 참석하지 않으실 경우, 합격은 취소됩니다. 확인하셨습니까?</Text1>
        <Foot>
-        <Text2>1/3 페이지</Text2>  
+        <Text2>2/2 페이지</Text2>  
           <FootSub>
             <Button blue>저장</Button>
             <Button filled>제출하기</Button>
           </FootSub>
-       
        </Foot>
      </Main>
-     
-    
     </div>
   };
   
