@@ -9,6 +9,7 @@ import ContactPage from "./pages/ContactPage";
 import Footer from "./components/common/Footer";
 import Responsive from "./components/common/Responsive";
 import DeveloperRecruit from "./pages/DeveloperRecruit";
+import DeveloperRecruitSub from "./pages/DeveloperRecruitSub";
 import DesignerRecruit from "./pages/DesignerRecruit";
 import DesignerRecruitSub from "./pages/DesignerRecruitSub";
 
@@ -33,6 +34,7 @@ const App = () => {
           <Route component={ProjectPage} path="/project" />
           <Route component={RecruitmentPage} path="/recruitment" />
           <Route component={DeveloperRecruit} path="/developerRecruit" />
+          <Route component={DeveloperRecruitSub} path="/developerRecruitSub" />
           <Route component={DesignerRecruit} path="/designerRecruit" />
           <Route component={DesignerRecruitSub} path="/designerRecruitSub" />
           <Route component={ContactPage} path="/contact" />
