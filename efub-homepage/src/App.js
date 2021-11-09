@@ -13,6 +13,9 @@ import DeveloperRecruitSub from "./pages/DeveloperRecruitSub";
 import DeveloperRecruitLead from "./pages/DeveloperRecruitLead";
 import DeveloperRecruitIntern from "./pages/DeveloperRecruitIntern";
 import DesignerRecruit from "./pages/DesignerRecruit";
+import ListPage from "./pages/ListPage";
+import FirstList from "./pages/FirstList";
+import FinalList from "./pages/FinalList";
 import DesignerRecruitSub from "./pages/DesignerRecruitSub";
 
 const Main = styled(Responsive)`
@@ -35,6 +38,9 @@ const App = () => {
           <Route component={AboutPage} path="/" exact />
           <Route component={ProjectPage} path="/project" />
           <Route component={RecruitmentPage} path="/recruitment" />
+          <Route component={ListPage} path="/list" />
+          <Route component={FirstList} path="/firstList" />
+          <Route component={FinalList} path="/finalList" />
           <Route component={DeveloperRecruit} path="/developerRecruit" />
           <Route component={DeveloperRecruitSub} path="/developerRecruitSub" />
           <Route component={DeveloperRecruitLead} path="/developerRecruitLead" />
@@ -42,7 +48,6 @@ const App = () => {
           <Route component={DesignerRecruit} path="/designerRecruit" />
           <Route component={DesignerRecruitSub} path="/designerRecruitSub" />
           <Route component={ContactPage} path="/contact" />
-          
         </Switch>
       </Main>
       <Footer />
