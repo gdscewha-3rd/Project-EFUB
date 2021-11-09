@@ -73,7 +73,7 @@ const ImgBox = styled.img`
 `;
 
 const BackgroundImg = styled.img`
-  position: absolute;
+  position: fixed;
   width: ${(props) => props.width || "3rem"};
   height: ${(props) => props.height || "3rem"};
   top: ${(props) => props.top || "0"};
