@@ -13,6 +13,7 @@ import DesignerRecruit from "./pages/DesignerRecruit";
 import ListPage from "./pages/ListPage";
 import FirstList from "./pages/FirstList";
 import FinalList from "./pages/FinalList";
+import DesignerRecruitSub from "./pages/DesignerRecruitSub";
 
 const Main = styled(Responsive)`
   min-height: calc(100vh - 14rem);
@@ -39,6 +40,7 @@ const App = () => {
           <Route component={FinalList} path="/finalList" />
           <Route component={DeveloperRecruit} path="/developerRecruit" />
           <Route component={DesignerRecruit} path="/designerRecruit" />
+          <Route component={DesignerRecruitSub} path="/designerRecruitSub" />
           <Route component={ContactPage} path="/contact" />
         </Switch>
       </Main>
