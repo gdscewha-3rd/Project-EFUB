@@ -10,6 +10,8 @@ import Footer from "./components/common/Footer";
 import Responsive from "./components/common/Responsive";
 import DeveloperRecruit from "./pages/DeveloperRecruit";
 import DeveloperRecruitSub from "./pages/DeveloperRecruitSub";
+import DeveloperRecruitLead from "./pages/DeveloperRecruitLead";
+import DeveloperRecruitIntern from "./pages/DeveloperRecruitIntern";
 import DesignerRecruit from "./pages/DesignerRecruit";
 import DesignerRecruitSub from "./pages/DesignerRecruitSub";
 
@@ -35,6 +37,8 @@ const App = () => {
           <Route component={RecruitmentPage} path="/recruitment" />
           <Route component={DeveloperRecruit} path="/developerRecruit" />
           <Route component={DeveloperRecruitSub} path="/developerRecruitSub" />
+          <Route component={DeveloperRecruitLead} path="/developerRecruitLead" />
+          <Route component={DeveloperRecruitIntern} path="/developerRecruitIntern" />
           <Route component={DesignerRecruit} path="/designerRecruit" />
           <Route component={DesignerRecruitSub} path="/designerRecruitSub" />
           <Route component={ContactPage} path="/contact" />
