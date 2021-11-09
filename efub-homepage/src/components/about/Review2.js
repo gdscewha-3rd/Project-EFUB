@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 const Wrapper=styled.div`
     display: flex;
@@ -30,6 +30,12 @@ const TextBox=styled.div`
 const Text=styled.div`
     color:white;
     font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    ${props =>
+        props.eng &&
+        css`
+            font-family: 'Montserrat', sans-serif;
+    `}
     text-align: left;
     align-items: center;
     justify-content: center;
