@@ -69,7 +69,7 @@ const BackgroundImg = styled.img`
   top: 42rem;
   left: ${(props) => props.left || "none"};
   right: ${(props) => props.right || "none"};
-  z-index: 999;
+  z-index: 90;
   position: absolute;
 `;
 
