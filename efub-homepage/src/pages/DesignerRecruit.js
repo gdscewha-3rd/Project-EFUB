@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import palette from "../lib/styles/palette"
 import Button from "../components/common/Button";
 
@@ -27,6 +28,12 @@ const Foot = styled.div`
     margin-top: 1.5rem;
     justify-content: space-between;
 `
+const TextBox = styled.div`
+  width: 100%;
+  height: 5rem;
+  background-color: rgba(225, 225, 225, 0.15);
+`;
+
 const Text1 = styled.div`
     font-family: Roboto;
     font-style: normal;
@@ -55,7 +62,9 @@ const Input = styled.input`
     margin-bottom: 2rem;
     width: 100%; 
 `
+
 const DesignerRecruit = () => {
+  const [select,setSelect] = useState("all")
   return <div>
     <>
     <Banner>
@@ -77,7 +86,9 @@ const DesignerRecruit = () => {
       <Text2>여러분의 소중한 개인정보는 이펍 모집 일정이 끝난 직후 바로 폐기됩니다.</Text2>
       <Foot>
         <Text2>1/3 페이지</Text2>
-        <Button filled>다음</Button>
+        <Link to = "/designerRecruitSub">
+          <Button filled>다음</Button>
+        </Link>
       </Foot>
     </Main>
 
